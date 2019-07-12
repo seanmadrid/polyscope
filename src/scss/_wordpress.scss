@@ -1,0 +1,73 @@
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+div.wpcf7-response-output {
+	clear:both;
+}
+
+.wpcf7-validation-errors{
+	border:1px solid #ff0000 !important;
+	background:#fff;
+	color:#ff0000 !important;
+	padding:1em !important;
+	margin-top:4em !important;
+	clear:both;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.wpcf7-not-valid{
+	border:1px solid #ff0000;
+}
+
+.wpcf7-mail-sent-ok{
+	background:#fff;
+}
+
+.alignleft{
+	max-width:50%;
+	float:left;
+	margin:.3em 3em 3em 0;
+	height:auto;
+}
+
+.alignright{
+	max-width:50%;
+	float:right;
+	margin:.3em 0 3em 3em;
+	height:auto;
+}
+
+.aligncenter, .alignnone{
+	max-width:100%;
+	margin:1em auto;
+	height:auto;
+}
+
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+.error404{
+	padding-bottom:2em;
+	text-align:center;
+}

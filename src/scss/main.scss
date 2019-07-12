@@ -1,0 +1,27 @@
+// compiles to /style/css/main.css -- one stylesheet for the whole site
+
+@import "../../bower_components/normalize-scss/normalize";
+
+// SCSS-utils
+@import "../../bower_components/scut/dist/scut";
+@include scut-reset;
+
+/*============================ */
+
+
+// Icons, SVG, sprites
+@import "svg-datauris/svg-datauris";
+//@import "sprites/sprite-all";
+
+
+// Universals
+@import "variables";
+@import "type";
+@import "base";
+@import "grid";
+@import "page";
+//@import "wordpress";
+
+// Pages and Modules
+@import "header";
+@import "footer";

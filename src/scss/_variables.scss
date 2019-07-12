@@ -1,0 +1,49 @@
+/*==========================
+COLORS
+==========================*/
+$c-teal	: #67bfc6;
+$c-red  : #E73957;
+$c-bordergrey	: #dedede;
+$c-borderfocusblue	: #3898EC;
+$c-superlightgrey	: #F2F2F2;
+$c-black	: #333333;
+
+/*==========================
+FONTS
+==========================*/
+
+
+/*==========================
+DIMENSIONS
+==========================*/
+$d-max-width    : 75em;
+$d-max-width-m  : 50em;
+$d-max-width-sm : 55em;
+$d-nav-triangle : 2.5em;
+
+
+/*==========================
+MEDIA QUERIES
+==========================*/
+$break-xxl : 100em;
+$break-xl : 79.5em;
+$break-l : 64em;
+$break-m : 48em;
+$break-sm : 30em;
+$break-xs : 20em;
+
+/*==========================
+MARGINS
+==========================*/
+$m-xs: 0.25rem;
+$m-sm: 0.5rem;
+$m-med: 1rem;
+$m-lg: 2rem;
+$m-xl: 4rem;
+
+/*==========================
+TRANSITIONS
+==========================*/
+.tr-q {transition: all .25s;}
+.tr-h {transition: all .5s;}
+.tr-f {transition: all 1s;}

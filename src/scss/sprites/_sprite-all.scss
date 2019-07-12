@@ -1,0 +1,54 @@
+@import "_sprite-all-hd.scss";
+
+$placeholder-x: 0px;
+$placeholder-y: 0px;
+$placeholder-offset-x: 0px;
+$placeholder-offset-y: 0px;
+$placeholder-width: 55px;
+$placeholder-height: 55px;
+$placeholder-total-width: 55px;
+$placeholder-total-height: 55px;
+$placeholder-image: '../images/sprites/ld-all.png';
+$placeholder-hd: $hd-placeholder;
+$placeholder: 0px 0px 0px 0px 55px 55px 55px 55px '../images/sprites/ld-all.png' $hd-placeholder;
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  background-image: url(nth($sprite, 9));
+}
+
+@mixin sprite-hd($sprite) {
+  @if (length($sprite) == 10) {
+    $sprite-total-width: nth($sprite, 7);
+    $sprite-total-height: nth($sprite, 8);
+    @media (-o-min-device-pixel-ratio: 5/4),
+           (-webkit-min-device-pixel-ratio: 1.25),
+           (min-resolution: 120dpi) {
+      $hd-variable: nth($sprite, 10);
+      @include sprite-image($hd-variable);
+      background-size: $sprite-total-width $sprite-total-height;
+    }
+  }
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+  @include sprite-hd($sprite);
+}
+

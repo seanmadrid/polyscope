@@ -1,0 +1,475 @@
+.container {
+    @include scut-clearfix;
+    min-width:20em;
+}
+
+.content{
+    max-width: 100em;
+    margin: auto;
+}
+
+.cc{
+    width: 100%;
+
+    @media (min-width:$break-m) {
+        max-width: $d-max-width;
+        margin: auto;
+    }
+}
+
+.cc-m{
+    width: 100%;
+    @media (min-width:$break-m) {
+        max-width: $d-max-width-m;
+        margin: auto;
+    }
+}
+
+.cc-sm{
+    width: 100%;
+
+    @media (min-width:$break-m) {
+        max-width: $d-max-width-sm;
+        margin: auto;
+    }
+}
+
+.cc-xsm{
+    width: 100%;
+
+    @media (min-width:$break-m) {
+        max-width: 30em;
+        margin: auto;
+    }
+}
+
+.row{
+    width: 100%;
+
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    &.fix {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+
+.r-flex {
+    display: flex;
+    flex-direction: column;
+    @media(min-width:$break-m) {
+        flex-direction: row;
+    }
+}
+
+.col{
+    width: 100%;
+    float: left;
+    @media (min-width:$break-sm) {
+        min-height: 1px;
+    }
+}
+
+.rel { position: relative; }
+
+@for $i from 0 through 12 {
+    .col-#{$i} {
+        @media (min-width:$break-m) {
+            width: ((100% / 12) * $i);
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-mob-#{$i} {
+        width: ((100% / 12) * $i);
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-tab-#{$i} {
+        @media (min-width:$break-sm) {
+            width: ((100% / 12) * $i);
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-sm-desk-#{$i} {
+        @media (min-width:$break-m) {
+            width: ((100% / 12) * $i);
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-desk-#{$i} {
+        @media (min-width:$break-l) {
+            width: ((100% / 12) * $i);
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-lg-#{$i} {
+        @media (min-width:$break-xl) {
+            width: ((100% / 12) * $i);
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-xl-#{$i} {
+        @media (min-width:$break-xxl) {
+            width: ((100% / 12) * $i);
+        }
+    }
+}
+
+.col.main {
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: 100%;
+            @media (min-width:$break-xl) {
+                width: ((100% / 12) * $i);
+            }
+        }
+    }
+}
+
+.col-fh {
+    height: 100%;
+}
+
+
+.full-height {
+    @media(max-width: $break-m){
+        min-height: 0 !important;
+    }
+}
+
+// PADDING
+.p-y-t{
+    padding-top: $m-med;
+}
+
+.p-y-b{
+    padding-bottom: $m-med;
+}
+
+.p-x-l{
+    padding-left: $m-med;
+}
+
+.p-x-r{
+    padding-right: $m-med;
+}
+
+.p-x{
+    @extend .p-x-l;
+    @extend .p-x-r;
+}
+
+.p-y{
+    @extend .p-y-t;
+    @extend .p-y-b;
+}
+
+.p{
+    @extend .p-x;
+    @extend .p-y;
+}
+
+.p-sm-y-t{
+    padding-top: $m-sm;
+}
+
+.p-sm-y-b{
+    padding-bottom: $m-sm;
+}
+
+.p-sm-x-l{
+    padding-left: $m-sm;
+}
+
+.p-sm-x-r{
+    padding-right: $m-sm;
+}
+
+.p-sm-x{
+    @extend .p-sm-x-l;
+    @extend .p-sm-x-r;
+}
+
+.p-sm-y{
+    @extend .p-sm-y-t;
+    @extend .p-sm-y-b;
+}
+
+.p-sm{
+    @extend .p-sm-x;
+    @extend .p-sm-y;
+}
+
+
+.p-lg-y-t{
+    padding-top: ($m-med*2);
+}
+
+.p-lg-y-b{
+    padding-bottom: ($m-med*2);
+}
+
+.p-lg-x-l{
+    padding-left: ($m-med*2);
+}
+
+.p-lg-x-r{
+    padding-right: ($m-med*2);
+}
+
+.p-lg-x{
+    @extend .p-lg-x-l;
+    @extend .p-lg-x-r;
+}
+
+.p-lg-y{
+    @extend .p-lg-y-t;
+    @extend .p-lg-y-b;
+}
+
+.p-lg{
+    @extend .p-lg-x;
+    @extend .p-lg-y;
+}
+
+.p-xl-y-t{
+    padding-top: ($m-med*4);
+}
+
+.p-xl-y-b{
+    padding-bottom: ($m-med*4);
+}
+
+.p-xl-x-l{
+    padding-left: ($m-med*4);
+}
+
+.p-xl-x-r{
+    padding-right: ($m-med*4);
+}
+
+.p-xl-x{
+    @extend .p-xl-x-l;
+    @extend .p-xl-x-r;
+}
+
+.p-xl-y{
+    @extend .p-xl-y-t;
+    @extend .p-xl-y-b;
+}
+
+.p-xl{
+    @extend .p-xl-x;
+    @extend .p-xl-y;
+}
+
+.no-p {
+    padding: 0;
+}
+
+//MARGINS
+.m-y-t{
+    margin-top: $m-med;
+}
+
+.m-y-b{
+    margin-bottom: $m-med;
+}
+
+.m-x-l{
+    margin-left: $m-med;
+}
+
+.m-x-r{
+    margin-right: $m-med;
+}
+
+.m-x{
+    @extend .m-x-l;
+    @extend .m-x-r;
+}
+
+.m-y{
+    @extend .m-y-t;
+    @extend .m-y-b;
+}
+
+.m{
+    @extend .m-x;
+    @extend .m-y;
+}
+
+.m-sm-y-t{
+    margin-top: $m-sm;
+}
+
+.m-sm-y-b{
+    margin-bottom: $m-sm;
+}
+
+.m-sm-x-l{
+    margin-left: $m-sm;
+}
+
+.m-sm-x-r{
+    margin-right: $m-sm;
+}
+
+.m-sm-x{
+    @extend .m-sm-x-l;
+    @extend .m-sm-x-r;
+}
+
+.m-sm-y{
+    @extend .m-sm-y-t;
+    @extend .m-sm-y-b;
+}
+
+.m-sm{
+    @extend .m-sm-x;
+    @extend .m-sm-y;
+}
+
+
+.m-lg-y-t{
+    margin-top: ($m-med*2);
+}
+
+.m-lg-y-b{
+    margin-bottom: ($m-med*2);
+}
+
+.m-lg-x-l{
+    margin-left: ($m-med*2);
+}
+
+.m-lg-x-r{
+    margin-right: ($m-med*2);
+}
+
+.m-lg-x{
+    @extend .m-lg-x-l;
+    @extend .m-lg-x-r;
+}
+
+.m-lg-y{
+    @extend .m-lg-y-t;
+    @extend .m-lg-y-b;
+}
+
+.m-lg{
+    @extend .m-lg-x;
+    @extend .m-lg-y;
+}
+
+.no-m {
+    margin: 0;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.p-lg-med {
+    @media(min-width: $break-m){
+        padding: $m-lg;
+    }
+}
+
+.p-lg-y-med {
+    @media(min-width: $break-m){
+        padding-top: $m-lg;
+        padding-bottom: $m-lg;
+    }
+}
+
+.p-x-med {
+    @media(min-width: $break-m){
+        padding-left: $m-med;
+        padding-right: $m-med;
+    }
+}
+
+.p-y-med {
+    @media(min-width: $break-m){
+        padding-top: $m-med;
+        padding-bottom: $m-med;
+    }
+}
+
+.p-y-lg {
+    @media(min-width: $break-l){
+        padding-top: $m-med;
+        padding-bottom: $m-med;
+    }
+}
+
+.p-sm-y-med {
+    @media(min-width: $break-m){
+        padding-top: $m-sm;
+        padding-bottom: $m-sm;
+    }
+}
+
+.p-x-l-med {
+    @media(min-width: $break-m){
+        padding-left: $m-med;
+    }
+}
+
+.p-lg-x-l-med {
+    @media(min-width: $break-m){
+        padding-left: $m-lg;
+    }
+}
+
+.p-lg-x-r-med {
+    @media(min-width: $break-m){
+        padding-right: $m-lg;
+    }
+}
+
+.p-lg-y-b-med {
+    @media(min-width: $break-m){
+        padding-bottom: $m-lg;
+    }
+}
+
+.p-lg-x-l-lg {
+    @media(min-width: $break-l){
+        padding-left: $m-lg;
+    }
+}
+
+.p-x-mobi {
+    padding: 0 $m-med;
+    @media(min-width: $break-xl){
+        padding: 0;
+    }
+}
+
+.p-xl-x-med {
+    padding: $m-med;
+    @media(min-width: $break-m){
+        padding: $m-lg $m-xl;
+    }
+}

@@ -1,0 +1,16 @@
+syntax: glob
+node_modules
+bower_components
+*.orig
+*.git
+.grunt-init
+.sass-cache
+.DS_Store
+
+public_assets
+
+src/images/svg-datauri-assets/opt
+src/js/lib/lodash.build.js
+
+src/scss/svg-datauris
+src/scss/sprites

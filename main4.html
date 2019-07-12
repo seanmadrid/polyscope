@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <!-- Put any CDN-loaded fonts here, before stylesheets. -->
+    <link rel="stylesheet" href="public_assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i" rel="stylesheet">
+</head>
+
+<body class="main4">
+    <div id="metrics_popup_bg" class="metrics-popup-bg"></div>
+    <div id="metrics_popup" class="metrics-popup">
+        <span id="metrics_close">&times;</span>
+        <div class="metrics-image"></div>
+    </div>
+    <div id="block_screen" class="block-screen">
+        <span>
+            We Apologize. This prototype is only available on desktop browsers.
+        </span>
+    </div>
+    <div class="row rel pull-left">
+        <div id="sb" class="sidebar sb-project">
+            <div id="project" class="project">
+                <div class="p-lg-x p-y-t p-lg-y-b ">
+                    <div class="process-step m-y-b t-upper">
+                        Project
+                    </div>
+                    <div class="project-name m-y-b">
+                        <input name="project_name" type="text" placeholder="Name">
+                    </div>
+                    <div class="project-desc m-y-b">
+                        <textarea name="project_description" rows="10" placeholder="Description"></textarea>
+                    </div>
+                    <div class="m-y-b">
+                        <a id="save_project" href="#" class="button">Save</a>
+                    </div>
+                </div>
+            </div>
+            <div id="task" class="task">
+                <div class="p-lg">
+                    <div class="process-step m-y-b t-upper">
+                        Task
+                    </div>
+                    <div class="project-name m-y-b">
+                        <input name="project_name" type="text" placeholder="Name">
+                    </div>
+                    <div class="project-desc m-y-b">
+                        <textarea name="project_description" rows="10" placeholder="Description"></textarea>
+                    </div>
+                    <div class="project-calendar m-y-b">
+                    </div>
+                    <div class="project-hours m-y-b">
+                        <h3 class="task-title">Hours to complete: <span id="hours2complete"></span></h3>
+                        <input id="hours_range" type="range" min="1" max="40" />
+                        <span class="min">1</span>
+                        <span class="max">40</span>
+                    </div>
+                    <div class="project-priority m-y-b">
+                        <h3 class="task-title">Priority</h3>
+                        <div class="option">
+                            <input type="radio" name="priority" value="low"> Low
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="priority" value="medium"> Medium
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="priority" value="high"> High
+                        </div>
+                    </div>
+                    <div class="m-y-b row rel pull-left">
+                        <a id="save_project" href="#" class="button">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sphere" class="col col-9 rel pull-right col-sphere">
+            <div class="row">
+                <div class="project-icons p">
+                    <a href="#" id="red_flag" class="project-icon red-flag"></a>
+                    <a href="projects.html" class="project-icon all-projects"></a>
+                    <a href="metrics.html" class="project-icon metrics"></a>
+                    <a href="#" class="project-icon edit"></a>
+                    <a href="start.html" class="project-icon logout"></a>
+                </div>
+            </div>
+            <div data-hash="#data_0" class="polysphere-area poly-video rel row pull-left show">
+                <div id="container"></div>
+            </div>
+            <div class="bottom-container">
+                <div class="row rel">
+                    <a id="add_task" class="add-task" href="#"><span class="little-plus">+</span>Add Task</a>
+                </div>
+            </div>
+        </div>
+        <div class="sphere-toggle pad-it">
+            <a id="toggle_l" class="toggle-arrow toggle-arrow-left" href="main3.html">
+            </a>
+            <div id="toggle_r" class="toggle-arrow toggle-arrow-right no-link">
+            </div>
+        </div>
+        <div class="keys">
+            <div class="keys-wrap">
+                <div class="key-label">TASK GROUPS:</div>
+                <div class="key-flex">
+                    <div class="key key1" data-hover="Discovery / Planning">TG<br> 1</div>
+                    <div class="key key2" data-hover="Prototypes">TG<br> 2</div>
+                    <div class="key key3" data-hover="Sprint 1 Feedback">TG<br> 3</div>
+                    <div class="key key4" data-hover="Content">TG<br> 4</div>
+                    <div class="key key5" data-hover="Content Management System">TG<br> 5</div>
+                    <div class="key key6" data-hover="Accessibility Review">TG<br> 6</div>
+                    <div class="key key7" data-hover="QA / Browser Testing">TG<br> 7</div>
+                    <div class="key key8" data-hover="Design Review">TG<br> 8</div>
+                    <div class="key key9" data-hover="Things That Fell Through the Cracks">TG<br> 9</div>
+                    <div class="key key10" data-hover="Bugs">TG 10</div>
+                    <div class="key key11" data-hover="Sprint 2 Feedback">TG 11</div>
+                    <div class="key key12" data-hover="Pre-Launch Checklist">TG 12</div>
+                    <div class="key key13" data-hover="Post-Launch Checklist">TG 13</div>
+                    <div class="key key14" data-hover="Set up dev environment">TG 14</div>
+                    <div class="key key15" data-hover="Design">TG 15</div>
+                </div>
+                <!-- <div class="key key5" data-hover="Task Group Name">TG 5</div> -->
+            </div>
+        </div>
+    </div>
+    <div id="popup">
+        <div class="pop-box assignment">
+            <span>Assignment:</span> Create a new logo.
+        </div>
+        <div class="pop-box Description">
+            <span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio vitae orci semper mollis.
+        </div>
+        <div class="pop-box team-member">
+            <span>Team Member:</span> Sofia Revazishvili
+        </div>
+        <div class="pop-box close-task">
+            <a href="close4.html">close task</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+    <script src="public_assets/js/dependencies.js"></script>
+    <script src="public_assets/js/libs.js"></script>
+    <script src="public_assets/js/app.js"></script>
+    <script src="public_assets/js/main4.js"></script>
+</body>
+
+</html>

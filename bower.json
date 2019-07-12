@@ -1,0 +1,17 @@
+{
+  "name": "frontend-starter",
+  "version": "0.0.3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "scut": "~0.10.3",
+    "normalize-scss": "~3.0.1",
+    "jquery": "~2.1.0"
+  }
+}
